@@ -1,7 +1,7 @@
 from cerberus import Validator
 
 
-def events_createor_validator(request: any):
+def events_creator_validator(request: any):
     body_validator = Validator({
         "data":{
             "type":"dict",
@@ -13,7 +13,7 @@ def events_createor_validator(request: any):
     response = body_validator.validate(request.json)
 
     if response is False:
-        print(body_validator.errors)
+        raise: Exception(body_validator.errors)
     
     
     

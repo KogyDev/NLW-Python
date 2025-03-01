@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from src.model.entities.eventos import Eventos 
 
-class EventosRepository(ABC):
+class EventosRepositoryInterface(ABC):
     @abstractmethod
     def insert(self, event_name: str) -> None: 
         pass
